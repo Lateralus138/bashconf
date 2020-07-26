@@ -2,9 +2,9 @@ program main
     implicit none
     CHARACTER(LEN=255) :: HOME
     CHARACTER(LEN=32767) :: ARG
-    CHARACTER(LEN=:), ALLOCATABLE :: TRIMV,TRIMA,DUMMY
-    INTEGER :: ARGCOUNT,INDEX
-    LOGICAL :: EXIST,SILENT,WRITTEN = .false.
+    CHARACTER(LEN=:), ALLOCATABLE :: TRIMV,TRIMA
+    INTEGER :: ARGCOUNT,INDEX,FSTAT,CSTAT
+    LOGICAL :: EXIST,SILENT = .false.
     ARGCOUNT = COMMAND_ARGUMENT_COUNT()
     IF (ARGCOUNT .eq. 0) CALL EXIT(1)
     CALL GET_ENVIRONMENT_VARIABLE('HOME',HOME)
@@ -54,17 +54,15 @@ program main
             IF (EXIST) THEN
                 IF (SILENT .eqv. .false.) WRITE(*,'(A)') TRIMV//' already exists and was not created.'
             ELSE
-                IF (SILENT .eqv. .false.) WRITE(*,'(A)') 'Attempting to create file: '//TRIMV//'.'
-                OPEN(1033 + INDEX,FILE=TRIMV,STATUS="new",ACTION="write")
-                WRITE(1033 + INDEX,*) ''
-                CLOSE(1033 + INDEX)
-                WRITTEN = .true.
-            END IF
-            IF (WRITTEN .eqv. .true.) THEN
-                WRITTEN = .false.
-                INQUIRE(FILE=TRIMV,EXIST=EXIST)
-                IF (EXIST) THEN
-                    IF (SILENT .eqv. .false.) WRITE(*,'(A)') TRIMV//' created successfully.'
+                IF (SILENT .eqv. .false.) WRITE(*,'(A)') 'Attempting to create file: '//TRIMV
+                OPEN(INDEX,FILE=TRIMV,STATUS="new",ACTION="write",IOSTAT=FSTAT)
+                IF (FSTAT .eq. 0) THEN
+                    CLOSE(INDEX,STATUS='KEEP',IOSTAT=CSTAT)
+                    IF (CSTAT .eq. 0) THEN
+                        IF (SILENT .eqv. .false.) WRITE(*,'(A)') TRIMV//' created.'
+                    ELSE
+                        IF (SILENT .eqv. .false.) WRITE(*,'(A)') 'Could not create '//TRIMV//'.'
+                    END IF
                 ELSE
                     IF (SILENT .eqv. .false.) WRITE(*,'(A)') 'Could not create '//TRIMV//'.'
                 END IF
