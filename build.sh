@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 ls
-# chmod +x build.sh
-# chmod +x appimagetool-x86_64.AppImage
-# appimagetool-x86_64.AppImage bashconf.AppDir
+chmod +x ./appimagetool-x86_64.AppImage
+./appimagetool-x86_64.AppImage bashconf.AppDir
