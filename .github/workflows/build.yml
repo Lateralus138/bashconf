@@ -33,7 +33,7 @@ jobs:
         ./build.sh
 
     - name: Create Release
-      uses: ncipollo/release-action@v1
+      uses: Lateralus138/release-action@v1
       with:
         allowUpdates: True
         tag: continuous
