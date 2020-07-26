@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=bashconf
+Exec=bashconf %F
+Icon=bashconf
+Terminal=true
+Type=Application
+Categories=Utility;
