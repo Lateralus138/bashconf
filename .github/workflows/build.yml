@@ -21,6 +21,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+
+    - name: Install required dependencies
+      run: sudo apt-get install desktop-file-utils zsync wget
+
     # Runs a set of commands using the runners shell
     - name: Download building tools & executing AppImage build
       run: |
