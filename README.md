@@ -66,9 +66,9 @@ Attempting to create file: /home/<USERNAME>/.bash_test2.
 ## Files <a  id="files"></a>
 
 - [Source Files](source.tar.gz) <a id="source"></a>
-- [Project Files](project.tar.gz) <a id="project"></a>
-- [Binary Executable](dist/bin/bashconf) <a id="binary"></a>
-- [AppImage](dist/appimage/bashconf-x86_64.AppImage) <a id="appimage"></a>
+- [Project Files](https://github.com/Lateralus138/bashconf/archive/Continuous.tar.gz) <a id="project"></a>
+- [Binary Executable](https://github.com/Lateralus138/bashconf/releases/download/Continuous/bashconf) <a id="binary"></a>
+- [AppImage](https://github.com/Lateralus138/bashconf/releases/download/Continuous/bashconf-x86_64.AppImage) <a id="appimage"></a>
   - Can be renamed.
 - [Bash Completion](bash/bashconf-completion.bash) <a id="bashcompletion"></a>
   - Can be sourced or you can copy the "complete" section to your dot file.
