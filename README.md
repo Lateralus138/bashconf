@@ -73,7 +73,7 @@ Attempting to create file: /home/<USERNAME>/.bash_test2.
 - [Bash Completion](bash/bashconf-completion.bash) <a id="bashcompletion"></a>
   - Can be sourced or you can copy the "complete" section to your dot file.
 - [This Repository](https://github.com/Lateralus138/bashconf) <a id="repository"></a>
-- [Release Page](https://lateralus138.github.io/bashconf) <a id="release"></a>
+- [Release Page](https://github.com/Lateralus138/bashconf/releases) <a id="release"></a>
 
 ## Media <a  id="media"></a>
 
