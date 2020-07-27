@@ -30,7 +30,7 @@ jobs:
         ./build.sh
 
     - name: Create Release
-      uses: lateralus138/release-action@v1
+      uses: actions/create-release@v1
       with:
         allowUpdates: True
         tag: continuous
