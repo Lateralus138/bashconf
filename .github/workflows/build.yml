@@ -36,5 +36,5 @@ jobs:
         tag: Continuous
         name: Continuous Build
         prerelease: False
-        artifacts: "bashconf-x86_64.AppImage"
+        artifacts: "bashconf-x86_64.AppImage,dist/bin/bashconf"
         token: ${{ secrets.GITHUB_TOKEN }}
