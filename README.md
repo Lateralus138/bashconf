@@ -1,5 +1,9 @@
 # bashconf
 
+***`COMING SOON`***
+This all still works, but I am planning a slight **function/script** re-write, a better **AppImage**, and a much better **README**.
+***`COMING SOON`***
+
 ![Linux Utility](https://img.shields.io/static/v1?label=Utility&message=Linux&color=green) ![Fortran Utility](https://img.shields.io/static/v1?label=Utility&message=Fortran&color=blue) ![Command Line Utility](https://img.shields.io/static/v1?label=Utility&message=Command%20Line&color=blueviolet) ![Bash Utility](https://img.shields.io/static/v1?label=Utility&message=Bash&color=important) ![Fortran Utility](https://img.shields.io/static/v1?label=Programming&message=Fortran&color=yellow)
 
 ## Index
